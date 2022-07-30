@@ -1,0 +1,41 @@
+% One par choices environment
+\documentclass[answers]{exam}
+\usepackage{amssymb}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage{pstricks}
+\usepackage{pst-barcode}
+
+\renewcommand{\questionlabel}{\textbf{Q\thequestion.}}
+
+\title{QR codes and Barcodes in \LaTeX\ with \texttt{pst-barcode} package}
+\date{ {{today}} }
+\maketitle
+
+\begin{document}
+
+
+\begin{pspicture}(50mm,8mm)
+    \psbarcode{ {{code}} }{width=2 height=0.25}{code128}
+\end{pspicture}
+
+
+\begin{questions}
+    \checkboxchar{$\Box$}
+    \checkedchar{$\checkmark$}
+    \question Compute the limit
+    $$
+        \lim_{x\to\infty} \frac{42 x +2}{x-17}
+    $$
+
+    \begin{oneparcheckboxes}
+        \CorrectChoice $42$
+        \choice $69$
+        \choice $0$
+        \choice $\infty$
+    \end{oneparcheckboxes}
+
+\end{questions}
+
+\end{document}
